@@ -2,13 +2,247 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Portafolio de [Tu Nombre]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de [Maximo Quiroga]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        /* --- VARIABLES DE COLOR (¡Cambia los colores de todo el sitio aquí!) --- */
+        :root {
+            --color-primario: #3b82f6; /* Un azul moderno */
+            --color-fondo: #f8f9fa; /* Un gris muy claro */
+            --color-texto: #212529; /* Un gris oscuro, casi negro */
+            --color-tarjeta: #ffffff; /* Blanco */
+        }
+
+        /* --- ESTILOS GENERALES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            padding: 60px 0;
+        }
+        h1, h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.2em;
+        }
+
+        /* --- BARRA DE NAVEGACIÓN --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--color-primario);
+        }
+
+        /* --- SECCIÓN PRINCIPAL (HERO) --- */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero .subtitulo {
+            font-size: 1.2em;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+        .hero .boton-principal {
+            display: inline-block;
+            background-color: var(--color-primario);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .hero .boton-principal:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- SECCIÓN DE PROYECTOS --- */
+        .proyectos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .proyecto-tarjeta {
+            background-color: var(--color-tarjeta);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .proyecto-tarjeta:hover {
+            transform: translateY(-5px);
+        }
+        .proyecto-tarjeta img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .proyecto-tarjeta .info {
+            padding: 20px;
+        }
+        .proyecto-tarjeta h3 {
+            margin-bottom: 10px;
+        }
+        .proyecto-tarjeta .tags {
+            margin-bottom: 15px;
+        }
+        .proyecto-tarjeta .tag {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        .proyecto-tarjeta .links a {
+            color: var(--color-primario);
+            text-decoration: none;
+            font-weight: 700;
+            margin-right: 15px;
+        }
+
+        /* --- FOOTER (CONTACTO) --- */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #eee;
+        }
+        .social-links a {
+            font-size: 1.8em;
+            color: #343a40;
+            margin: 0 15px;
+            transition: color 0.2s;
+        }
+        .social-links a:hover {
+            color: var(--color-primario);
+        }
+        footer p {
+            margin-top: 20px;
+            color: #6c757d;
+        }
     </style>
 </head>
 <body>
-    <h1>¡Hola! Soy [Escribe tu Nombre Aquí]</h1>
-    <p>¡Bienvenido a mi portafolio! Aún está en construcción, pero pronto subiré mis proyectos.</p>
+
+    <div class="container">
+        <nav class="navbar">
+             <a href="#" class="logo">[TU NOMBRE]</a>
+             </nav>
+    </div>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Hola, soy Máximo Quiroga</h1>
+            <p class="subtitulo">Desarrollador en formación y entusiasta de la tecnología. Creando cosas para la web.</p>
+            <a href="#proyectos" class="boton-principal">Ver mis proyectos</a>
+            </div>
+    </section>
+
+    <section id="proyectos">
+        <div class="container">
+            <h2>Mis Proyectos</h2>
+            <div class="proyectos-grid">
+
+                <div class="proyecto-tarjeta">
+                    <img src="https://via.placeholder.com/400x250" alt="Descripción de la imagen del proyecto">
+                    <div class="info">
+                        <h3>Nombre del Proyecto 1</h3>
+                        <p>Una breve descripción de lo que hace este proyecto, el problema que resuelve y qué aprendiste haciéndolo.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="links">
+                            <a href="#">Ver Código</a>
+                            <a href="#">Sitio en Vivo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-tarjeta">
+                    <img src="https://via.placeholder.com/400x250" alt="Descripción de la imagen del proyecto">
+                    <div class="info">
+                        <h3>Nombre del Proyecto 2</h3>
+                        <p>Este es otro proyecto. Quizás uno hecho con Python, o un diseño que hiciste. Explica de qué se trata.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                        <div class="links">
+                            <a href="#">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto-tarjeta">
+                    <img src="https://via.placeholder.com/400x250" alt="Descripción de la imagen del proyecto">
+                    <div class="info">
+                        <h3>Nombre del Proyecto 3</h3>
+                        <p>Añade tantos proyectos como quieras. Recuerda: es mejor tener 3 proyectos bien explicados que 10 vacíos.</p>
+                        <div class="tags">
+                            <span class="tag">Diseño</span>
+                            <span class="tag">Figma</span>
+                        </div>
+                        <div class="links">
+                            <a href="#">Ver en Behance</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>Hablemos</h2>
+            <p>Puedes encontrarme en mis redes o enviarme un correo a maximoquirogajc@gmail.com</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Máximo Quiroga. Todos los derechos reservados.</p>
+            </div>
+    </footer>
+
 </body>
 </html>
