@@ -10,7 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-primario: #3b82f6; --color-fondo: #f8f9fa; --color-texto: #212529; --color-tarjeta: #ffffff;
+            --color-primario: #3b82f6; 
+            --color-fondo: #f8f9fa; 
+            --color-texto: #212529; 
+            --color-tarjeta: #ffffff;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
@@ -33,12 +36,6 @@
             gap: 30px; 
             margin-top: 40px; 
         }
-        
-        .proyecto-tarjeta-link {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-        }
 
         .proyecto-tarjeta { 
             background-color: var(--color-tarjeta); 
@@ -48,7 +45,7 @@
             transition: transform 0.2s; 
             display: flex; 
             flex-direction: column; 
-            width: 100%;
+            height: 100%;
         }
 
         .proyecto-tarjeta:hover { transform: translateY(-5px); }
@@ -63,14 +60,25 @@
 
         .proyecto-tarjeta h3 { margin-bottom: 10px; }
         .proyecto-tarjeta p { margin-bottom: 15px; font-size: 0.95em; color: #4b5563; }
-        .proyecto-tarjeta .tags { margin-bottom: 15px; }
         .proyecto-tarjeta .tag { display: inline-block; background-color: #e9ecef; color: #495057; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; margin-bottom: 5px; }
         
-        .proyecto-tarjeta .links { 
-            margin-top: auto;
-            padding-top: 15px;
+        .btn-codigo {
+            display: inline-block;
+            background-color: #24292e;
+            color: white !important;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9em;
+            text-align: center;
+            transition: background 0.3s;
+            margin-top: 10px;
         }
-        .proyecto-tarjeta .links a { color: var(--color-primario); text-decoration: none; font-weight: 700; margin-right: 15px; }
+
+        .btn-codigo:hover {
+            background-color: #444;
+        }
 
         footer { text-align: center; padding: 40px 0; border-top: 1px solid #eee; }
         .social-links a { font-size: 1.8em; color: #343a40; margin: 0 15px; transition: color 0.2s; }
@@ -99,58 +107,64 @@
             <h2>Mis Proyectos</h2>
             <div class="proyectos-grid">
 
-                <a href="https://mi-analizador.vercel.app/" target="_blank" class="proyecto-tarjeta-link">
-                    <div class="proyecto-tarjeta">
-                        <img src="Images/cap_de_analizador.png" alt="Vista previa de la App con Gemini AI">
+                <div class="proyecto-tarjeta">
+                    <a href="https://mi-analizador.vercel.app/" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="Images/cap_de_analizador.png" alt="Analizador">
                         <div class="info">
                             <h3>Aplicación de análisis de código</h3>
-                            <p>Un proyecto interactivo que analiza código con el motor GEMINI de Google, explicando el funcionamiento paso a paso.</p>
+                            <p>Un proyecto interactivo que analiza código con el motor GEMINI de Google.</p>
                             <div class="tags">
                                 <span class="tag">Node.js</span>
                                 <span class="tag">Gemini API</span>
                                 <span class="tag">Vercel</span>
                             </div>
-                            <div class="https://github.com/Maximoquirogaa/Mi_analizador">
-                                <span>Ver Código</span>
-                            </div>
                         </div>
+                    </a>
+                    <div style="padding: 0 20px 20px;">
+                        <a href="https://github.com/Maximoquirogaa/Mi_analizador" target="_blank" class="btn-codigo">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
                     </div>
-                </a>
+                </div>
 
-                <a href="#" class="proyecto-tarjeta-link">
-                    <div class="proyecto-tarjeta">
-                        <img src="https://via.placeholder.com/400x250" alt="Descripción">
+                <div class="proyecto-tarjeta">
+                    <a href="#" style="text-decoration: none; color: inherit;">
+                        <img src="https://via.placeholder.com/400x250" alt="Proyecto">
                         <div class="info">
                             <h3>Nombre del Proyecto 1</h3>
-                            <p>Una breve descripción de lo que hace este proyecto, el problema que resuelve y qué aprendiste haciéndolo.</p>
+                            <p>Descripción del proyecto y objetivos logrados durante el desarrollo.</p>
                             <div class="tags">
                                 <span class="tag">HTML</span>
                                 <span class="tag">CSS</span>
                                 <span class="tag">JavaScript</span>
                             </div>
-                            <div class="links">
-                                <span>Ver Código</span>
-                            </div>
                         </div>
+                    </a>
+                    <div style="padding: 0 20px 20px;">
+                        <a href="#" class="btn-codigo">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
                     </div>
-                </a>
+                </div>
 
-                <a href="https://climaxsounds.netlify.app/" target="_blank" class="proyecto-tarjeta-link">
-                    <div class="proyecto-tarjeta">
-                        <img src="Images/climaxsounds.png" alt="Climax Sounds vista previa">
+                <div class="proyecto-tarjeta">
+                    <a href="https://climaxsounds.netlify.app/" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="Images/climaxsounds.png" alt="Climax Sounds">
                         <div class="info">
                             <h3>Climax Sounds</h3>
-                            <p>Motor de análisis léxico y recomendación musical para DJs. Analiza el 'ADN léxico' de canciones para crear mashups perfectos mediante algoritmos de coincidencia. API propia</p>
+                            <p>Motor de análisis léxico y recomendación musical para DJs. Mashups perfectos.</p>
                             <div class="tags">
                                 <span class="tag">Python</span>
                                 <span class="tag">API</span>
                             </div>
-                            <div class="https://github.com/Maximoquirogaa/Climax_Sounds">
-                                <span>Ver Código</span>
-                            </div>
                         </div>
+                    </a>
+                    <div style="padding: 0 20px 20px;">
+                        <a href="https://github.com/Maximoquirogaa/Climax_Sounds" target="_blank" class="btn-codigo">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
                     </div>
-                </a>
+                </div>
 
             </div>
         </div>
@@ -168,8 +182,5 @@
             <p>&copy; 2026 Máximo Quiroga. Todos los derechos reservados.</p>
         </div>
     </footer>
-</body>
-</html>
-
 </body>
 </html>
